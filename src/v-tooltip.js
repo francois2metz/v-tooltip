@@ -59,11 +59,11 @@ function getOptions (options) {
 
 function getPlacement (value, modifiers) {
   let placement = value.placement
-  for (const pos of positions) {
+  positions.forEach(function (pos) {
     if (modifiers[pos]) {
       placement = pos
     }
-  }
+  })
   return placement
 }
 
